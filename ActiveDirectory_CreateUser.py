@@ -34,7 +34,7 @@ with open('nouvelutilisateur.csv', 'r', encoding='utf8') as csv_file:
             optional_attributes={
             'userPrincipalName': employee_id + '@mondomaine.local', 'givenName': prenom,
             'sn': nom, 'description': description, 'displayName': nom + " " + prenom,
-            'samaccountname': employee_id, 'homeDirectory': "\\\\DATA\Personnel" + "\\" + employee_id,
+            'samaccountname': employee_id, 'homeDirectory': "\\\\Winserver2016\DATA\Personnel" + "\\" + employee_id,
             'homeDrive': "H:"})
 
             print("L'utilisateur " + nom + " " + prenom + " a bien été créé.")
@@ -55,7 +55,7 @@ with open('nouvelutilisateur.csv', 'r', encoding='utf8') as csv_file:
             print("Le dossier pour l'utilisateur " + nom + " " + prenom + " n'a pas été créé.")
         #ATTRIBUTION DES DROITS D'UTILISATEUR.
         try:
-                        FILENAME = (r"C:\\DATA\\Personnel\\") + employee_id
+                        FILENAME = (r"\\Winserver2016\\DATA\\Personnel\\") + employee_id
 
                         usery, domain, type = win32security.LookupAccountName("", employee_id + "@mondomaine.local")
 
