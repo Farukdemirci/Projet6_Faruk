@@ -15,5 +15,13 @@ Installation
 Module à télécharger
 
 1.	Pyad
+Pour télécharger ce module tapez la commande suivante :
+```
+pip install pyad
+```
 
 2.	Pywin32
+Pour télécharger ce module tapez la commande suivante :
+```
+pip install pywin32
+```
